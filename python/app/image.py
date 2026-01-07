@@ -22,5 +22,5 @@ def compresser_image(img, sortie="image_compressee.jpg"):
             print("Image compressée avec succès")
             return img
 
-# redimensionner_image(image)
+redimensionner_image(image)
 compresser_image(image)
