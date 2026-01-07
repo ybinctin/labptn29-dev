@@ -1,0 +1,14 @@
+services:
+  apache:
+    build: apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./apache/html:/var/www/html
+
+  python:
+    build: python
+    volumes:
+      - ./python/app:/appConteneur
+    working_dir: /appConteneur
+    command: ["tail", "-f", "/dev/null"]
