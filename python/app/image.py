@@ -38,7 +38,7 @@ except OSError:
     print("Format d'image non reconnu ou fichier corrompu.")
     sys.exit(1)
 
-def redimensionner_image(img, sortie):
+def redimensionner_image(img, sortie=sortie_redimensionnee):
     try:
         largeur_orig, hauteur_orig = img.size
 
@@ -68,7 +68,7 @@ def redimensionner_image(img, sortie):
         print("Erreur lors du redimensionnement : " + e)
         sys.exit(1)
 
-def compresser_image(img, sortie):
+def compresser_image(img, sortie=sortie_compressee):
     for qualite in range(qualite_max, qualite_min - 1, -pas_qualite):
         try:
             img.save(sortie, format=format_sortie, quality=qualite, optimize=True)
