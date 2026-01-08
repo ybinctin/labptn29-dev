@@ -82,8 +82,6 @@ def compresser_image(img, sortie=sortie_compressee):
         except Exception as e:
             print("Erreur lors de la compression : " + e)
             sys.exit(1)
-
-    print("Impossible d'atteindre la taille maximale avec les paramètres de compression.")
     return False
 
 image_redimensionnee = redimensionner_image(image)
